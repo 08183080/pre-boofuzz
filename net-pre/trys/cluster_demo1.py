@@ -18,6 +18,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import pairwise_distances
 from sklearn.cluster import AgglomerativeClustering
 import csv_reader
+from longest_common_str import find_lcsubstr
 
 # 输入字符串列表
 # strings = [
@@ -53,3 +54,11 @@ for i, label in enumerate(clustering.labels_):
 
 for i, cluster in enumerate(clusters):
     print(f'Cluster {i + 1}: {cluster}')
+
+# print(clusters)
+for i in range(n_clusters):
+    n = len(clusters[i])
+    s1 = clusters[i][0]
+    s2 = clusters[i][n-1] if n >= 1 else s1
+    pattern = find_lcsubstr(s1, s2)
+    print(f"cluster{i+1}的请求包格式是: {find_lcsubstr(s1, s2)[0]}", " xxx")
