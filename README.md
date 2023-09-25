@@ -6,3 +6,8 @@
 
 # 协议 介绍
 1. [FTP rfc](https://datatracker.ietf.org/doc/html/rfc959)
+
+# TO DO
+- [ ] 收集很多的不同账户的登录信息发送ftp数据包
+- [ ] 先完成针对于FTP协议的状态机的推理（针对于wireshark抓和解析的包）
+- [ ] 完成针对于ftp的协议状态机构建之后,在boofuzz上集成起来,浅浅跑一跑
