@@ -61,7 +61,7 @@ def dict_process(dict):
     return ans
 
 
-f = open("../tcpdump_cap/2.csv", "r")
+f = open("../data/2.csv", "r")
 # csv_reader(f)
 list = csv_get_last(f)
 # print(len(dict))  440 挺多的

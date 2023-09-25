@@ -1,6 +1,6 @@
 # 读取
 # 读取pcap文件, 将读取结果打印出来...
-f = open("./tcpdump_cap/dump1.pcap", "rb")
+f = open("./data/dump1.pcap", "rb")
 content = f.read()
 # print(content)
 

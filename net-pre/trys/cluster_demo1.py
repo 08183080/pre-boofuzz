@@ -20,21 +20,21 @@ from sklearn.cluster import AgglomerativeClustering
 import csv_reader
 
 # 输入字符串列表
-strings = [
-    'USER dragon',
-    'USER luffy',
-    'USER kitty',
-    'PWD',
-    'SYST',
-    'PASS 10234',
-    'SYST',
-    'USER ***',
-    'PASS 0000000',
-    'User XieHoulong'
-]
-# f = open("../tcpdump_cap/2.csv", "r")
-# strings = csv_reader.csv_get_last(f)
-# print(strings)
+# strings = [
+#     'USER dragon',
+#     'USER luffy',
+#     'USER kitty',
+#     'PWD',
+#     'SYST',
+#     'PASS 10234',
+#     'SYST',
+#     'USER ***',
+#     'PASS 0000000',
+#     'User XieHoulong'
+# ]
+f = open("../data/2.csv", "r")
+strings = csv_reader.csv_get_last(f)
+print(strings)
 
 # 计算字符串之间的相似度矩阵
 vectorizer = TfidfVectorizer()
