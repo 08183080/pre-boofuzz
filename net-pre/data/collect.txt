@@ -1,0 +1,27 @@
+2023/9/26
+
+在ubuntu上开启vsftpd服务,收集pcap包
+vsftpd
+
+如何创建多个账户？
+$sudo adduser xxx
+设置密码
+
+我创建了哪些账户呢？
+wo 08183080
+win 8765
+wang 19w
+cu 888
+
+如何监听这些数据pcap包?
+1. 我目前监听的是本地发给本地的数据包...
+2. tcpdump -i lo port 21 --print -w 3.pcap
+3. 使用多账户登录，上传文件，下载文件，删除文件...
+
+在wsl上用tcpdump抓包的时候 ctrl + z会部分丢包的, 应该用ctrl + c (== kill -9)
+
+
+在wireshark上过滤出ftp包后, ctrl+shift+alt+t则会把所有的追踪流提取出来的
+
+我又收集了几个本地回环地址发送的数据
+数据收集的大差不差了...
