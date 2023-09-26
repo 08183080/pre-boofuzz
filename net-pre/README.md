@@ -8,4 +8,5 @@
   - [x] adduser创建数个账户，crtl+c完整收集数据包，数据包收集的很完善了。
   - [x] 使用wireshark工具的时候，发现ctrl+alt+shift+t可以追踪每一条ftp的slow。
   - [ ] 阅读ftp协议，理解它的状态机。
-  - [ ] 捋清楚我想做的改进的可行性。  
+  - [ ] 捋清楚我想做的改进的可行性。
+  - [x] 尝试实现py2csv，还有一些没解决，发现[pyshark](https://github.com/KimiNewt/pyshark)开源项目还有不足，可以去PR
