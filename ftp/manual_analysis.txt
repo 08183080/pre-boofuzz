@@ -1,0 +1,25 @@
+		USER
+	|----------PASS
+	|	   |
+	QUIT	SYST
+		FEAT
+		EPSV
+		LIST
+	   |--------CWD--------|
+	   |		   |
+	EPSV		PWD
+	LIST		QUIT
+   | -------TYPE |-------|
+   |		   |
+SIZE		EPSV
+EPSV		STOR
+RETR		SIZE
+QUIT		EPSV
+		RETR
+		MDTM
+		SIZE
+		EPSV
+		RETR
+		MDTM
+		QUIT
+
