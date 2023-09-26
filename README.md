@@ -20,3 +20,6 @@
 # 项目日志
 ## net-pre
 走得再慢一点，走得再稳一点。[【日志】](https://github.com/08183080/pre-boofuzz/tree/main/net-pre)
+
+# 问题思考
+1. Boofuzz的缺点是什么？
