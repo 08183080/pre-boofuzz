@@ -33,7 +33,7 @@ from longest_common_str import find_lcsubstr
 #     'PASS 0000000',
 #     'User XieHoulong'
 # ]
-f = open("../data/2.csv", "r")
+f = open("./ans.csv", "r")
 strings = csv_reader.csv_get_last(f)
 print(strings)
 
@@ -43,7 +43,7 @@ tfidf_matrix = vectorizer.fit_transform(strings)
 distances = pairwise_distances(tfidf_matrix, metric='cosine')
 
 # 执行层次聚类
-n_clusters = 9  # 聚类数目
+n_clusters = 8  # 聚类数目
 clustering = AgglomerativeClustering(n_clusters=n_clusters, affinity='precomputed', linkage='average')
 clustering.fit(distances)
 
@@ -56,9 +56,9 @@ for i, cluster in enumerate(clusters):
     print(f'Cluster {i + 1}: {cluster}')
 
 # print(clusters)
-for i in range(n_clusters):
-    n = len(clusters[i])
-    s1 = clusters[i][0]
-    s2 = clusters[i][n-1] if n >= 1 else s1
-    pattern = find_lcsubstr(s1, s2)
-    print(f"cluster{i+1}的请求包格式是: {find_lcsubstr(s1, s2)[0]}", " xxx")
+# for i in range(n_clusters):
+#     n = len(clusters[i])
+#     s1 = clusters[i][0]
+#     s2 = clusters[i][n-1] if n >= 1 else s1
+#     pattern = find_lcsubstr(s1, s2)
+#     print(f"cluster{i+1}的请求包格式是: {find_lcsubstr(s1, s2)[0]}", " xxx")

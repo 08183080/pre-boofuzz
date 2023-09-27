@@ -22,8 +22,8 @@ def csv_select(f):
     dict = {}
     for row in reader:
         # 将Info信息是request开头的数据条都提取出来
-        if "Request" in row["Info"]:
-            dict[row['No.']] = row['Info']
+        # if "Request" in row["Info"]:
+        dict[row['no']] = row['ftp_request']
         # print("insert successfully~")
     return dict
 
@@ -33,8 +33,8 @@ def csv_get_last(f):
     list = []
     for row in reader:
         # list.append(row['Info'])
-        if "Request" in row['Info']:
-            list.append(row['Info'][9:])
+        # if "Request" in row['Info']:
+        list.append(row['ftp_request'])
             # print(dict['Info'])
     return list
 
@@ -61,7 +61,7 @@ def dict_process(dict):
     return ans
 
 
-f = open("../data/2.csv", "r")
+f = open("./ans.csv", "r")
 # csv_reader(f)
 list = csv_get_last(f)
 # print(len(dict))  440 挺多的
