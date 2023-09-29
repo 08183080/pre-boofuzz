@@ -10,3 +10,4 @@
   - [ ] 阅读ftp协议，理解它的状态机。
   - [ ] 捋清楚我想做的改进的可行性。
   - [x] 尝试实现py2csv，还有一些没解决，发现[pyshark](https://github.com/KimiNewt/pyshark)开源项目还有不足，可以去PR
+- [x] 9/27【设计】实现pcap2csv了... 
