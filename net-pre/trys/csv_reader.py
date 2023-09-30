@@ -67,5 +67,5 @@ list = csv_get_last(f)
 # print(len(dict))  440 挺多的
 # ans = dict_process(dict)
 print(list)
-s = list2set(list)
-print(s)
+# s = list2set(list)
+# print(s)
