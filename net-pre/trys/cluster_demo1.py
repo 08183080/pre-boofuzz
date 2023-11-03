@@ -33,7 +33,7 @@ from longest_common_str import find_lcsubstr
 #     'PASS 0000000',
 #     'User XieHoulong'
 # ]
-f = open("./ans.csv", "r")
+f = open("D:\\pre-boofuzz\\pre-boofuzz\\net-pre\\trys\\ans.csv", "r")
 strings = csv_reader.csv_get_last(f)
 print(strings)
 
@@ -43,7 +43,7 @@ tfidf_matrix = vectorizer.fit_transform(strings)
 distances = pairwise_distances(tfidf_matrix, metric='cosine')
 
 # 执行层次聚类
-n_clusters = 8  # 聚类数目
+n_clusters = 7  # 聚类数目
 clustering = AgglomerativeClustering(n_clusters=n_clusters, affinity='precomputed', linkage='average')
 clustering.fit(distances)
 
